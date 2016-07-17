@@ -1,1 +1,6 @@
-Pandas
+# Pandas 0.18.1
+Contains following components:
+* numpy==1.11.1
+* numexpr==2.6.0
+* bottleneck==1.1.0
+* pandas==0.18.1
