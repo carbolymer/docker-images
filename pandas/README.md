@@ -1,7 +1,2 @@
-# Pandas 0.18.1
-Contains following components:
-* numpy==1.11.1
-* numexpr==2.6.0
-* bottleneck==1.1.0
-* tables==3.2.3.1
-* pandas==0.18.1
+# Pandas
+For the contents see [requirements.txt](requirements.txt) file.
