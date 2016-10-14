@@ -1,7 +1,7 @@
 pykalman==0.9.5
-statsmodels==0.6.1
+statsmodels==0.8.0rc1
 redis==2.10.5
 influxdb==3.0.0
-urllib3==1.17
+urllib3==1.18
 schedule==0.3.2
 
