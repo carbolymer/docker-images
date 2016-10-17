@@ -4,4 +4,5 @@ redis==2.10.5
 influxdb==3.0.0
 urllib3==1.18
 schedule==0.3.2
+jupyter==1.0.0
 
