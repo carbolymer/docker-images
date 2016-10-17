@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends ${BUILD_DEPS} &
     apt-get purge -y --auto-remove ${BUILD_DEPS} && \
     rm -rf /root/.cache/pip && rm -rf /tmp/* && rm -rf /usr/share/doc/* && rm -rf /usr/share/man/* && \
     rm -rf /usr/share/locale/* && rm -rf /usr/local/lib/python3.5/__pycache__/*
-ENTRYPOINT ["python3"]
+CMD ["python3"]
