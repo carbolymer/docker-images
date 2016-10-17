@@ -7,5 +7,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends ${BUILD_DEPS} l
     apt-get purge -y --auto-remove ${BUILD_DEPS} && \
     rm -rf /root/.cache/pip && rm -rf /tmp/* && rm -rf /usr/share/doc/* && rm -rf /usr/share/man/* && \
     rm -rf /usr/share/locale/* && rm -rf /usr/local/lib/python3.5/__pycache__/*
-ENTRYPOINT ["python3"]
+
+ENV TINI_VERSION v0.10.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
+RUN chmod +x /bin/tini
+ENTRYPOINT ["/bin/tini", "--"]
+CMD ["python3"]
 
