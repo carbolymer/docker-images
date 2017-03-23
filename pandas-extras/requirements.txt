@@ -1,12 +1,12 @@
 pykalman==0.9.5
-statsmodels==0.8.0rc1
+statsmodels==0.8.0
 redis==2.10.5
-influxdb==3.0.0
-urllib3==1.19.1
+influxdb==4.0.0
+urllib3==1.20
 schedule==0.4.2
 jupyter==1.0.0
-matplotlib==2.0.0rc1
-bokeh==0.12.3
-hide_code==0.3.1
+matplotlib==2.0.0
+bokeh==0.12.4
+hide_code==0.4.0
 forbiddenfruit==0.1.2
 
