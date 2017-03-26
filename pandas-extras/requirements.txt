@@ -9,4 +9,6 @@ matplotlib==2.0.0
 bokeh==0.12.4
 hide_code==0.4.0
 forbiddenfruit==0.1.2
+yapf==0.16.1
+jupyter_contrib_nbextensions==0.2.6
 
