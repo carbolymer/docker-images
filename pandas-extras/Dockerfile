@@ -2,7 +2,7 @@ FROM carbolymer/python3:pandas-0.19.2
 WORKDIR /tmp
 COPY requirements.txt ./
 ENV BUILD_DEPS="build-essential gfortran"
-RUN apt-get update && apt-get install -y --no-install-recommends ${BUILD_DEPS} && rm -rf /var/lib/apt/lists/* && \
+RUN apt-get update && apt-get install -y --no-install-recommends ${BUILD_DEPS} tesseract-ocr tesseract-ocr-eng && rm -rf /var/lib/apt/lists/* && \
     pip3 install --requirement /tmp/requirements.txt && \
     jupyter nbextension install --py hide_code && jupyter nbextension enable --py hide_code && jupyter serverextension enable --py hide_code && \
     cp -r /usr/local/lib/python3.6/site-packages/jupyter_contrib_nbextensions/nbextensions/* /usr/local/share/jupyter/nbextensions && \
