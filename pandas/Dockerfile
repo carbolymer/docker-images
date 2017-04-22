@@ -1,4 +1,4 @@
-FROM carbolymer/python3:python-3.6.1-slim
+FROM python:3.6.1-slim
 WORKDIR /tmp
 COPY requirements.txt ./
 ENV BUILD_DEPS="build-essential gfortran libhdf5-dev"
