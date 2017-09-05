@@ -1,4 +1,4 @@
-FROM carbolymer/python3:pandas-0.19.2
+FROM carbolymer/python:python-pandas-0.20.3
 WORKDIR /tmp
 COPY requirements.txt ./
 ENV BUILD_DEPS="build-essential gfortran"
