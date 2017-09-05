@@ -1,0 +1,6 @@
+numpy==1.13.1
+numexpr==2.6.2
+bottleneck==1.2.1
+tables==3.4.2
+pandas==0.20.3
+
