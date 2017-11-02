@@ -1,8 +1,12 @@
 #!/bin/bash
-stack install --install-ghc --split-objs --ghc-options="-fPIC -fllvm -pgmlo opt -pgmlc llc"
 mkdir -p out/
 rm -rf out/*
-mv ~/.local/bin/* out/
+stack install \
+    --install-ghc \
+    --split-objs \
+    --ghc-options="-fPIC -fllvm -pgmlo opt -pgmlc llc" \
+    --local-bin-path out/ \
+    --color always
 
 if [[ "$1" = "upx" ]]; then
     upx --ultra-brute $(find out/ -maxdepth 1 -type f -executable -exec file -i '{}' \; | grep 'x-executable; charset=binary' | cut -d ':' -f1)
