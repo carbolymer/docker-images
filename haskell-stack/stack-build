@@ -1,8 +1,7 @@
 #!/bin/bash
 mkdir -p out/
 rm -rf out/*
-stack install \
-    --install-ghc \
+stack --install-ghc install \
     --split-objs \
     --ghc-options="-fPIC -fllvm -pgmlo opt -pgmlc llc" \
     --local-bin-path out/ \

@@ -13,6 +13,6 @@ RUN apt-get update && \
     rm -rf /usr/share/doc /usr/share/man
 
 ENV PATH /usr/lib/llvm-3.9/bin/:$PATH
-COPY stack-build-static /usr/local/bin/
-RUN chmod +x /usr/local/bin/stack-build-static
+COPY stack-build /usr/local/bin/
+RUN chmod +x /usr/local/bin/stack-build
 

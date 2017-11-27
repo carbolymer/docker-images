@@ -1,11 +1,6 @@
 # Haskell Stack
 
-Haskell Stack based on Debian Stretch suited for building statically bound binaries. What you need to do is to add to your `.cabal` file:
-
-```
-  ld-options:          -static
-```
-and run `stack-build-static` inside project directory. If you'd like to pack binaries using `upx`, use `stack-build-static upx`. Generated binaries will be in the
+Haskell Stack based on Debian Stretch suited for building Stack projects. What you need to do is to run `stack-build` inside project directory. If you'd like to pack binaries using `upx`, use `stack-static upx`. Generated binaries will be in the
 `out/` directory.
 
 # Tips
