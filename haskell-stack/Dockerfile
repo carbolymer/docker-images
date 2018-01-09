@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-ENV STACK_VER   1.5.1
+ENV STACK_VER   1.6.3
 
 ENV LANG        C.UTF-8
 RUN apt-get update && \
