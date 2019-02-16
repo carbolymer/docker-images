@@ -1,6 +1,10 @@
-numpy==1.14.2
-numexpr==2.6.4
+numpy==1.16.1
+scipy==1.2.1
+python-dateutil==2.8.0
+pytz==2018.9
+numexpr==2.6.9
 bottleneck==1.2.1
-tables==3.4.2
-pandas==0.22.0
+tables==3.4.4
+xarray==0.11.3
+pandas==0.24.1
 
