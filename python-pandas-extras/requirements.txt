@@ -2,7 +2,7 @@ pykalman==0.9.5
 statsmodels==0.9.0
 redis==3.1.0
 influxdb==5.2.1
-urllib3==1.24.1
+urllib3==1.24.2
 schedule==0.6.0
 jupyter==1.0.0
 matplotlib==3.0.2
