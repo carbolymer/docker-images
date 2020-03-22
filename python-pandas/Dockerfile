@@ -1,10 +1,10 @@
-FROM python:3.7-slim
+FROM python:3.8
 WORKDIR /tmp
 COPY requirements.txt ./
 ENV BUILD_DEPS="build-essential gfortran libhdf5-dev"
 ENV HDF5_DIR="/usr/lib/x86_64-linux-gnu/hdf5/serial/"
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ${BUILD_DEPS} libhdf5-100 hdf5-tools && \
+    apt-get install -y --no-install-recommends ${BUILD_DEPS} libhdf5-103 hdf5-tools && \
     rm -rf /var/lib/apt/lists/* && \
     xargs -L 1 -n 1 pip install < requirements.txt && \
     apt-get purge -y --auto-remove ${BUILD_DEPS} && \
