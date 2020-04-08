@@ -4,7 +4,7 @@ COPY requirements.txt ./
 COPY apache-airflow /usr/bin
 ENV BUILD_DEPS="build-essential gfortran git"
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ${BUILD_DEPS} netcat tesseract-ocr tesseract-ocr-eng patch && \
+    apt-get install -y --no-install-recommends ${BUILD_DEPS} netcat tesseract-ocr tesseract-ocr-eng vim patch && \
     rm -rf /var/lib/apt/lists/* && \
     xargs -L 1 -n 1 pip install < requirements.txt && \
     pip install --no-warn-conflicts cattrs==1.0 && \
@@ -15,6 +15,8 @@ RUN apt-get update && \
     chmod +x /usr/bin/apache-airflow && \
     apt-get purge -y --auto-remove ${BUILD_DEPS} && \
     rm -rf /root/.cache/pip && rm -rf /tmp/* && rm -rf /usr/share/doc/* && rm -rf /usr/share/man/* && \
-    rm -rf /usr/share/locale/*
+    rm -rf /usr/share/locale/* && \
+    mkdir -p /work/.cache /work/.local/share /work/.ipython/profile_default && \
+    chown -R workusr:workusr /work
 WORKDIR /work
 CMD ["python3"]
