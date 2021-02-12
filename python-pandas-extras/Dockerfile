@@ -1,4 +1,4 @@
-FROM carbolymer/python:python-pandas-1.0.3
+FROM carbolymer/python:python-pandas-1.2.2-1
 WORKDIR /tmp
 COPY requirements.txt ./
 COPY apache-airflow /usr/bin
