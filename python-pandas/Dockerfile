@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.8
 WORKDIR /tmp
 COPY requirements.txt ./
 ENV BUILD_DEPS="build-essential gfortran libhdf5-dev libblas-dev liblapack-dev"
