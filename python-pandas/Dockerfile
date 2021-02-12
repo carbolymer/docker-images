@@ -1,9 +1,10 @@
-FROM python:3.8
+FROM python:3.9
 WORKDIR /tmp
 COPY requirements.txt ./
-ENV BUILD_DEPS="build-essential gfortran libhdf5-dev"
+ENV BUILD_DEPS="build-essential gfortran libhdf5-dev libblas-dev liblapack-dev"
 ENV HDF5_DIR="/usr/lib/x86_64-linux-gnu/hdf5/serial/"
 RUN apt-get update && \
+    apt-get upgrade -y --no-install-recommends  && \
     apt-get install -y --no-install-recommends ${BUILD_DEPS} locales libhdf5-103 hdf5-tools && \
     sed -i 's/^# en_GB.UTF-8 UTF-8$/en_GB.UTF-8 UTF-8/g' /etc/locale.gen && \
     locale-gen && \
@@ -16,7 +17,7 @@ RUN apt-get update && \
     rm -rf /root/.cache/pip && rm -rf /tmp/* && rm -rf /usr/share/doc/* && rm -rf /usr/share/man/* && \
     rm -rf /usr/share/locale/*
 
-ENV TINI_VERSION v0.18.0
+ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /bin/tini
 RUN chmod +x /bin/tini
 WORKDIR /work
