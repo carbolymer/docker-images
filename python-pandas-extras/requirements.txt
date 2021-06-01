@@ -1,6 +1,6 @@
 pykalman==0.9.5
 statsmodels==0.12.2
-urllib3==1.26.3
+urllib3==1.26.5
 jupyter==1.0.0
 matplotlib==3.3.4
 bokeh==2.2.3
