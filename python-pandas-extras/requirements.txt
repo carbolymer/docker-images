@@ -9,7 +9,7 @@ forbiddenfruit==0.1.4
 yapf==0.30.0
 jupyter-contrib-nbextensions==0.5.1
 jupyterthemes==0.20.0
-nbconvert==6.0.7
+nbconvert==6.5.1
 pillow==8.1.0
 tabulate==0.8.7
 jupyterlab==3.0.7
